@@ -3,8 +3,9 @@ using namespace std;
 
 int main(void)
 {
-    int damage = 10;
     int defense = 0;
+    int myheart=50;
+    int monsterheart=60;
     int check;
 
     cout << "길가에 수상한 상자가 있다" << endl;
@@ -17,8 +18,8 @@ int main(void)
     switch (check)
     {
     case 1:
-        damage +=5;
-        cout << "안에는 쿠기가있다. 데미지가 5증가하였다. " << damage << endl;
+        myheart +=50;
+        cout << "안에는 쿠기가있다. 체력이 50증가하였다. " << myheart << endl;
         break;
     case 2:
         cout << "누군가와 마주쳤다" << endl;
@@ -29,14 +30,18 @@ int main(void)
    
     if (check == 1)
     {
-        cout << "누군가와 마주쳤다" << endl;
+        cout << "1. 내 체력" << myheart << endl;
+        cout << "2. 상대 체력" << monsterheart << endl;
+        cout << "2. 상대 체력은 나보다 적다 (승리)" << myheart << monsterheart << endl;
 
     }
 
+
     else if(check != 1)
     {
-        cout << "1. 공격 (현재 공격력:"<< damage << endl;
-        cout << "2. 방어 (현재 방어력:" << defense << endl;
+        cout << "1. 내 체력"<< myheart<< endl;
+        cout << "2. 상대 체력" << monsterheart << endl;
+        cout << "2. 상대 체력이 너무 많다 (패배)" << myheart << monsterheart << endl;
     }
     cin >> check;
 
