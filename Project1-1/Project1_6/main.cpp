@@ -4,8 +4,8 @@ using namespace std;
 int main(void)
 {
     int damage = 10;
+    int defense = 0;
     int check;
-    int check2;
 
     cout << "길가에 수상한 상자가 있다" << endl;
     cout << "1. 조사해본다" << endl;
@@ -26,20 +26,19 @@ int main(void)
         
     }
 
-    switch (check)
+   
+    if (check == 1)
     {
-        cout << "3. 그냥 지나간다" << endl;
-        cout << "4. 상대는 강해보인다." << endl;
-    case 3:
-        damage += 5;
-        cout << " " << endl;
-        break;
-    case 4:
-        cout << "" << endl;
-        break;
+        cout << "누군가와 마주쳤다" << endl;
 
     }
 
-   
+    else if(check != 1)
+    {
+        cout << "1. 공격 (현재 공격력:"<< damage << endl;
+        cout << "2. 방어 (현재 방어력:" << defense << endl;
+    }
+    cin >> check;
+
     return 0;
 }
